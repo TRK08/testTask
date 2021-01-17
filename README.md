@@ -1,0 +1,1 @@
+WORDPRESS + DOCKER test task
