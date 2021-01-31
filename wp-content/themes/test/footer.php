@@ -2,33 +2,74 @@
 /**
  * The template for displaying the footer
  *
- * Contains the closing of the #content div and all content after.
- *
- * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
- *
  * @package test
  */
 
 ?>
 
-	<footer id="colophon" class="site-footer">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'test' ) ); ?>">
-				<?php
-				/* translators: %s: CMS name, i.e. WordPress. */
-				printf( esc_html__( 'Proudly powered by %s', 'test' ), 'WordPress' );
-				?>
-			</a>
-			<span class="sep"> | </span>
-				<?php
-				/* translators: 1: Theme name, 2: Theme author. */
-				printf( esc_html__( 'Theme: %1$s by %2$s.', 'test' ), 'test', '<a href="http://underscores.me/">Underscores.me</a>' );
-				?>
-		</div><!-- .site-info -->
-	</footer><!-- #colophon -->
-</div><!-- #page -->
+<!-- Подвал -->
+<footer class="footer">
+    
+    <div class="container">
 
+        <div class="footer__social">
+            <a href="#" class="footer__socialLink">
+                <img class="footer__socialLink-inst" src="<?php echo get_template_directory_uri() ?>/img/instagram.svg">
+            </a>
+            <a href="#" class="footer__socialLink">
+                <img class="footer__socialLink-inst" src="<?php echo get_template_directory_uri() ?>/img/instagram.svg">
+            </a>
+            <a href="#" class="footer__socialLink">
+                <img class="footer__socialLink-inst" src="<?php echo get_template_directory_uri() ?>/img/instagram.svg">
+            </a>
+            <a href="#" class="footer__socialLink">
+                <img class="footer__socialLink-inst" src="<?php echo get_template_directory_uri() ?>/img/instagram.svg">
+                <!-- <img src=    "./img" alt=""> -->
+            </a>
+        </div>
+
+        <ul class="footer__menu">
+            <li class="footer__menu-item">
+                <a href="#">SOBRE NOSOTROS</a>
+            </li>
+            <li class="footer__menu-item">
+                <a href="#">TIENDA</a>
+            </li>
+            <li class="footer__menu-item">
+                <a href="#">SERVICIO</a>
+            </li>
+            <li class="footer__menu-item">
+                <a href="#">ENTREGAS</a>
+            </li>
+            <li class="footer__menu-item">
+                <a href="#">BLOG</a>
+            </li>
+            <li class="footer__menu-item">
+                <a href="#">CONTACTO</a>
+            </li>
+        </ul>
+
+        <div class="footer__logo">
+            <a href="#">
+                <img src="<?php echo get_template_directory_uri() ?>/img/footer-logo.svg">
+            </a>
+        </div>
+        <div class="col-md-12 text-center footer__copyright">
+            <p>@2019 Flordecor</p>
+            <span class="footer__copyright-separator"></span>
+            <p>Aviso legal</p>
+            <span class="footer__copyright-separator"></span>
+            <p>Politica de privacidad</p>
+            <span class="footer__copyright-separator"></span>
+            <p>Politica de cookies</p>
+        </div>
+        
+        
+    </div>
+</footer>
+<!-- /Окончание подвала /footer -->
 <?php wp_footer(); ?>
+
 
 </body>
 </html>

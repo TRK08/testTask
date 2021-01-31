@@ -16,44 +16,79 @@
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
-
 	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'test' ); ?></a>
 
-	<header id="masthead" class="site-header">
-		<div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$test_description = get_bloginfo( 'description', 'display' );
-			if ( $test_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $test_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
-			<?php endif; ?>
-		</div><!-- .site-branding -->
+	<header class="header">
+		<div class="header__topLine">
+			<span>ENTREGA EN 24 HRS O ELIGE LA FECHA</span>
+			<span>CONSULTA TU CODIGO POSTAL PARA ENTREGAS</span>
+			<span>PAGO SEGURO TARJETA DE CREDITO Y PAYPAL</span>
+		</div>
 
 		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'test' ); ?></button>
-			<?php
-			wp_nav_menu(
-				array(
-					'theme_location' => 'menu-1',
-					'menu_id'        => 'primary-menu',
-				)
-			);
-			?>
+			
+		</nav>
 		</nav><!-- #site-navigation -->
+
+			<div class="header-body">
+				<div class="header__burger-menu">
+					<span></span>
+					<span></span>
+					<span></span>
+				</div>
+
+				<div class="header__logo">
+					<img src="<?php echo get_template_directory_uri() ?>/img/header-logo.svg" alt="" >
+				</div>
+
+				<div class="header__shop">
+					<a class="header-shop__icon header-shop__icon-like" href="">
+						<img src="<?php echo get_template_directory_uri() ?>/img/profile-icon.svg" alt="">
+					</a>
+					<a class="header-shop__icon header-shop__icon-profile" href="">
+						<img src="<?php echo get_template_directory_uri() ?>/img/like-icon.svg" alt="">
+					</a>
+					
+					<a class="header-shop__icon header-shop__icon-cart" href="">
+						<img src="<?php echo get_template_directory_uri() ?>/img/cart-icon.svg" alt="">
+						<div class="header-shop__counter">
+							<?php echo sprintf('%d', WC()->cart->cart_contents_count); ?>
+						</div>
+
+						<a id="minicart" href="<?php echo WC()->cart->get_cart_url(); ?>" class="cart icon red relative">
+							<div id="cartcontents">
+								<div class="widget_shopping_cart_content">
+									<?php woocommerce_mini_cart(); ?>
+								</div>
+							</div>
+						</a>
+					</a>
+				</div>
+			</div>
+
+			<div class="header__bottom-text">
+				BOUTIQUE ONLINE DE FLORES Y REGALOS DE LUJO EN BARCELONA
+			</div>
+
+			<div class="header__bottom-line"></div>
+
+			
+
 	</header><!-- #masthead -->
+
+
+	<script>
+
+	</script>
+
+
+
+
+	
+
+
+	

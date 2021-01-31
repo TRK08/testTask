@@ -143,6 +143,7 @@ function test_scripts() {
 	wp_enqueue_style( 'test-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_style_add_data( 'test-style', 'rtl', 'replace' );
 
+	wp_enqueue_script( 'main-js', get_template_directory_uri() . '/js/main.js', array(), _S_VERSION,);
 	wp_enqueue_script( 'test-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
@@ -188,4 +189,34 @@ function my_menu_page_display(){
     echo '<h1>Hy My World</h1>';
     echo '<p>This is is my custom web page</p>';
 }
+
+
+// Link woocommerce to this theme
+
+add_action( 'after_setup_theme', 'woocommerce_support' );
+function woocommerce_support() {
+add_theme_support( 'woocommerce' );
+}
+
+// Add mini-cart
+
+function wif_woocommerce_header_add_to_cart_fragment($fragments) {
+
+	ob_start();
+	
+	?>
+	<div class="number bold">
+		<?php echo sprintf('%d', WC()->cart->cart_contents_count); ?>
+	</div>
+	
+	<?php
+	
+	$fragments['#minicart .number'] = ob_get_clean();
+	
+	return $fragments;
+	}
+	
+	add_filter('woocommerce_add_to_cart_fragments', 'wif_woocommerce_header_add_to_cart_fragment');
+
+	
 
