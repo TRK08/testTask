@@ -19,6 +19,9 @@ get_header();
 			
 		<?php woocommerce_content(); ?>
 
+		
+		
+
 	</main><!-- #main -->
 
 <?php

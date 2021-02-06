@@ -22,6 +22,8 @@ if ( ! is_ajax() ) {
 }
 ?>
 <div id="payment" class="woocommerce-checkout-payment">
+	<h3 class="payment__title">Оплата</h3>
+	<span class="payment__subtitle">Выберите способ оплаты, который вы предпочитаете</span>
 	<?php if ( WC()->cart->needs_payment() ) : ?>
 		<ul class="wc_payment_methods payment_methods methods">
 			<?php

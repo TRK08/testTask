@@ -1,0 +1,12 @@
+2021-02-03T15:00:06+00:00 CRITICAL Uncaught Error: Call to a member function has_weight() on string in /var/www/html/wp-content/plugins/woocommerce/includes/wc-template-functions.php:3378
+Stack trace:
+#0 /var/www/html/wp-includes/class-wp-hook.php(287): wc_display_product_attributes('')
+#1 /var/www/html/wp-includes/class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#2 /var/www/html/wp-includes/plugin.php(484): WP_Hook->do_action(Array)
+#3 /var/www/html/wp-content/themes/test/woocommerce/cart/cart.php(184): do_action('woocommerce_pro...')
+#4 /var/www/html/wp-content/plugins/woocommerce/includes/wc-core-functions.php(345): include('/var/www/html/w...')
+#5 /var/www/html/wp-content/plugins/woocommerce/includes/shortcodes/class-wc-shortcode-cart.php(99): wc_get_template('cart/cart.php')
+#6 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-shortcodes.php(72): WC_Shortcode_Cart::output(Array)
+#7 /var/www/html/wp-content/plugins/woocommerce/includes/class-wc-shortcodes.php(85): WC_Shortcodes::shortcode_wrapper(Array)
+#8 /var/www/ht в /var/www/html/wp-content/plugins/woocommerce/includes/wc-template-functions.php на строке 3378
+

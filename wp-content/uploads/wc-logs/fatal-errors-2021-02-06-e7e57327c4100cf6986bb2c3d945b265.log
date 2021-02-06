@@ -1,0 +1,4 @@
+2021-02-06T15:19:47+00:00 CRITICAL syntax error, unexpected 'version' (T_STRING) в /var/www/html/wp-content/themes/test/custom__checkout.php на строке 22
+
+2021-02-06T15:20:53+00:00 CRITICAL syntax error, unexpected 'version' (T_STRING) в /var/www/html/wp-content/themes/test/custom__checkout.php на строке 22
+

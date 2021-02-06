@@ -41,9 +41,9 @@
 					<span></span>
 				</div>
 
-				<div class="header__logo">
+				<a href="http://localhost:8000" class="header__logo">
 					<img src="<?php echo get_template_directory_uri() ?>/img/header-logo.svg" alt="" >
-				</div>
+				</a>
 
 				<div class="header__shop">
 					<a class="header-shop__icon header-shop__icon-like" href="">
@@ -53,7 +53,7 @@
 						<img src="<?php echo get_template_directory_uri() ?>/img/like-icon.svg" alt="">
 					</a>
 					
-					<a class="header-shop__icon header-shop__icon-cart" href="">
+					<a class="header-shop__icon header-shop__icon-cart" href="http://localhost:8000/cart">
 						<img src="<?php echo get_template_directory_uri() ?>/img/cart-icon.svg" alt="">
 						<div class="header-shop__counter">
 							<?php echo sprintf('%d', WC()->cart->cart_contents_count); ?>
@@ -71,10 +71,12 @@
 			</div>
 
 			<div class="header__bottom-text">
-				BOUTIQUE ONLINE DE FLORES Y REGALOS DE LUJO EN BARCELONA
+				BOUTIQUE ONLINE DE FLORES Y REGALOS DE LUJO EN BARCELONA 
 			</div>
 
 			<div class="header__bottom-line"></div>
+
+			
 
 			
 

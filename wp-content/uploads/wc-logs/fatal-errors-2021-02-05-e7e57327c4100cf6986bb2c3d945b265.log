@@ -1,0 +1,4 @@
+2021-02-05T15:42:08+00:00 CRITICAL require(): Failed opening required '/var/www/html/wp-content/themes/twentytwenty/inc/custom-header.php' (include_path='.:/usr/local/lib/php') в /var/www/html/wp-content/themes/twentytwenty/functions.php на строке 158
+
+2021-02-05T15:42:18+00:00 CRITICAL require(): Failed opening required '/var/www/html/wp-content/themes/twentytwenty/inc/custom-header.php' (include_path='.:/usr/local/lib/php') в /var/www/html/wp-content/themes/twentytwenty/functions.php на строке 158
+
